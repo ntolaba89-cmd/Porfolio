@@ -1,0 +1,753 @@
+/*==================================================
+                VARIABLES GLOBALES
+==================================================*/
+
+:root {
+
+    --background: #050505;
+
+    --background-soft: #0b0b0f;
+
+    --card-bg: rgba(255, 255, 255, 0.05);
+
+    --primary: #8b5cf6;
+
+    --primary-light: #a78bfa;
+
+    --secondary: #22d3ee;
+
+    --text: #ffffff;
+
+    --text-soft: #a1a1aa;
+
+    --border: rgba(255,255,255,0.12);
+
+    --shadow:
+    0 20px 40px rgba(0,0,0,0.4);
+
+    --glass:
+    backdrop-filter: blur(15px);
+
+    --radius: 20px;
+
+    --transition: 0.3s ease;
+
+}
+
+
+
+
+
+/*==================================================
+                    RESET
+==================================================*/
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+    line-height: 1.6;
+
+}
+
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+
+ul {
+
+    list-style: none;
+
+}
+
+
+
+
+
+/*==================================================
+                FONDO GENERAL
+==================================================*/
+
+
+body::before {
+
+
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+
+    height: 500px;
+
+    background: var(--primary);
+
+    filter: blur(180px);
+
+    opacity: 0.18;
+
+    top: -150px;
+
+    left: -150px;
+
+    z-index: -1;
+
+
+}
+
+
+
+body::after {
+
+
+    content: "";
+
+    position: fixed;
+
+    width: 450px;
+
+    height: 450px;
+
+    background: var(--secondary);
+
+    filter: blur(180px);
+
+    opacity: 0.12;
+
+    bottom: -150px;
+
+    right: -150px;
+
+    z-index: -1;
+
+
+}
+
+
+
+
+
+/*==================================================
+                CONTENEDOR GENERAL
+==================================================*/
+
+
+section {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 0;
+
+}
+
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+
+
+.section-title span {
+
+    color: var(--primary-light);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+.section-title h2 {
+
+    font-size: clamp(32px,5vw,48px);
+
+    margin: 15px 0;
+
+}
+
+
+
+.section-title p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: var(--text-soft);
+
+}
+
+
+
+
+
+/*==================================================
+                BOTONES GENERALES
+==================================================*/
+
+
+.btn-primary,
+.btn-secondary,
+.btn-nav {
+
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+
+
+.btn-primary {
+
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: white;
+
+    box-shadow:
+    0 10px 30px rgba(139,92,246,0.35);
+
+}
+
+
+
+.btn-primary:hover {
+
+
+    transform: translateY(-5px);
+
+    box-shadow:
+    0 20px 40px rgba(139,92,246,0.5);
+
+
+}
+
+
+
+.btn-secondary {
+
+
+    border: 1px solid var(--border);
+
+    background: rgba(255,255,255,0.04);
+
+}
+
+
+
+.btn-secondary:hover {
+
+
+    background: rgba(255,255,255,0.1);
+
+    transform: translateY(-5px);
+
+
+}
+/*==================================================
+                    HEADER
+==================================================*/
+
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 20px 5%;
+
+}
+
+
+
+.navbar {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 15px 25px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    backdrop-filter: blur(15px);
+
+}
+
+
+
+
+
+/* LOGO */
+
+
+.logo {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+}
+
+
+
+.logo span {
+
+    color: var(--primary-light);
+
+}
+
+
+
+
+
+/* MENU */
+
+
+.menu {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+
+.menu a {
+
+    color: var(--text-soft);
+
+    font-size: 15px;
+
+    transition: var(--transition);
+
+}
+
+
+
+.menu a:hover {
+
+    color: var(--text);
+
+}
+
+
+
+
+
+/* BOTON NAV */
+
+
+.btn-nav {
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid var(--border);
+
+    padding: 10px 22px;
+
+}
+
+
+
+.btn-nav:hover {
+
+    background: var(--primary);
+
+    transform: translateY(-3px);
+
+}
+
+
+
+
+
+
+/*==================================================
+                    HERO
+==================================================*/
+
+
+.hero {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding-top: 150px;
+
+}
+
+
+
+
+
+/* INFORMACION */
+
+
+.available {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid var(--border);
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+
+
+.hello {
+
+    color: var(--text-soft);
+
+    font-size: 20px;
+
+}
+
+
+
+
+
+.hero-info h1 {
+
+    font-size: clamp(45px,7vw,80px);
+
+    line-height: 1.1;
+
+    margin: 10px 0;
+
+    letter-spacing: -3px;
+
+}
+
+
+
+.hero-info h1 span {
+
+    display: block;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary-light),
+        var(--secondary)
+    );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+}
+
+
+
+
+
+.hero-info h2 {
+
+    font-size: clamp(22px,3vw,32px);
+
+    color: var(--text-soft);
+
+    margin-bottom: 25px;
+
+}
+
+
+
+
+
+.hero-description {
+
+    max-width: 550px;
+
+    color: var(--text-soft);
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+
+}
+
+
+
+
+
+
+/* BOTONES HERO */
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+
+
+
+/* REDES */
+
+
+.hero-social {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+
+.hero-social a {
+
+    color: var(--text-soft);
+
+    transition: var(--transition);
+
+}
+
+
+
+.hero-social a:hover {
+
+    color: var(--primary-light);
+
+}
+
+
+
+
+
+
+/*==================================================
+                IMAGEN HERO
+==================================================*/
+
+
+.hero-image {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+
+.image-card {
+
+    position: relative;
+
+    width: 380px;
+
+    height: 480px;
+
+    padding: 15px;
+
+    background:
+    rgba(255,255,255,0.06);
+
+    border-radius: 40px;
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: var(--shadow);
+
+    animation: floating 5s ease-in-out infinite;
+
+}
+
+
+
+
+
+.image-card::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:-3px;
+
+    border-radius:42px;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary),
+        transparent,
+        var(--secondary)
+    );
+
+    z-index:-1;
+
+}
+
+
+
+.image-card img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+}
+
+
+
+
+
+
+/* ANIMACION FOTO */
+
+
+@keyframes floating {
+
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+
+    50% {
+
+        transform: translateY(-15px);
+
+    }
+
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+
+}
