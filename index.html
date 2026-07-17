@@ -1,54 +1,241 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Martín Nicolás Tolaba | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <h2 class="logo">Martín<span>.</span></h2>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Sobre mí</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Proyectos</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Martín Nicolás Tolaba | Portfolio</title>
+
+    <meta name="description"
+        content="Portfolio personal de Martín Nicolás Tolaba, estudiante de programación Frontend y apasionado por el desarrollo web y las automatizaciones con Inteligencia Artificial.">
+
+    <meta name="keywords"
+        content="Portfolio, Frontend, HTML, CSS, JavaScript, IA, Automatizaciones, Landing Page">
+
+    <meta name="author" content="Martín Nicolás Tolaba">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--====================================
+                HEADER
+=====================================-->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="#" class="logo">
+
+                Martín<span>.</span>
+
+            </a>
+
+            <ul class="menu">
+
+                <li><a href="#hero">Inicio</a></li>
+
+                <li><a href="#about">Sobre mí</a></li>
+
+                <li><a href="#services">Servicios</a></li>
+
+                <li><a href="#projects">Proyectos</a></li>
+
+                <li><a href="#contact">Contacto</a></li>
+
+            </ul>
+
+            <a href="#contact" class="btn-nav">
+
+                Hablemos →
+
+            </a>
+
+        </nav>
+
     </header>
 
-    <section class="hero">
-      <div class="hero-text">
-        <p class="saludo">Hola 👋 Soy</p>
-        <h1>
-          Martín Nicolás
-          <span>Tolaba</span>
-        </h1>
-        <h3>Desarrollador Frontend & Automatizaciones con IA</h3>
-        <p class="descripcion">
-          Creo Landing Pages, aplicaciones web y automatizaciones que ayudan a
-          negocios y emprendedores a ahorrar tiempo, mejorar procesos y
-          conseguir más clientes mediante tecnología e Inteligencia Artificial.
-        </p>
-        <div class="botones">
-          <a href="#" class="btn btn-principal"> Agendar una llamada </a>
-          <a href="#" class="btn btn-secundario"> Ver proyectos </a>
-        </div>
-      </div>
-      <div class="hero-img">
-        <img src="img/martin.png" alt="Mi foto de perfil" />
-      </div>
-    </section>
-    <script src="script.js"></script>
-  </body>
-</html>
+
+
+    <!--====================================
+                MAIN
+=====================================-->
+
+    <main>
+
+        <!--====================================
+                    HERO
+=====================================-->
+
+        <section id="hero" class="hero">
+
+            <div class="hero-info">
+
+                <span class="available">
+
+                    🟢 Disponible para nuevos proyectos
+
+                </span>
+
+                <p class="hello">
+
+                    Hola, soy
+
+                </p>
+
+                <h1>
+
+                    Martín Nicolás
+
+                    <span>Tolaba</span>
+
+                </h1>
+
+                <h2>
+
+                    Desarrollador Frontend <br>
+
+                    & Automatizaciones con IA
+
+                </h2>
+
+                <p class="hero-description">
+
+                    Soy estudiante de programación Frontend y me apasiona crear
+                    Landing Pages, aplicaciones web y automatizaciones con
+                    Inteligencia Artificial.
+
+                    Mi objetivo es desarrollar soluciones que simplifiquen el
+                    trabajo de personas y negocios mediante herramientas modernas,
+                    intuitivas y funcionales.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn-primary">
+
+                        Ver proyectos
+
+                    </a>
+
+                    <a href="#about" class="btn-secondary">
+
+                        Sobre mí
+
+                    </a>
+
+                </div>
+
+                <div class="hero-social">
+
+                    <a href="https://github.com/ntolaba89-cmd" target="_blank">
+
+                        GitHub
+
+                    </a>
+
+                    <a href="mailto:ntolaba89@gmail.com">
+
+                        Email
+
+                    </a>
+
+                    <a href="https://wa.me/543875677045" target="_blank">
+
+                        WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hero-image">
+
+                <div class="image-card">
+
+                    <img src="img/martin.png" alt="Martín Nicolás Tolaba">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--====================================
+            TARJETAS DESTACADAS
+=====================================-->
+
+        <section class="quick-services">
+
+            <article class="service-card">
+
+                <h3>
+
+                    🌐 Landing Pages
+
+                </h3>
+
+                <p>
+
+                    Diseño páginas modernas optimizadas para convertir visitantes
+                    en clientes.
+
+                </p>
+
+            </article>
+
+            <article class="service-card">
+
+                <h3>
+
+                    🤖 Automatización IA
+
+                </h3>
+
+                <p>
+
+                    Automatizo tareas repetitivas para ahorrar tiempo y mejorar
+                    procesos.
+
+                </p>
+
+            </article>
+
+            <article class="service-card">
+
+                <h3>
+
+                    💻 Aplicaciones Web
+
+                </h3>
+
+                <p>
+
+                    Desarrollo herramientas digitales simples,
+                    funcionales y adaptadas a cada necesidad.
+
+                </p>
+
+            </article>
+
+        </section>
