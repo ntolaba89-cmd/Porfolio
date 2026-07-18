@@ -1039,19 +1039,19 @@ section {
 
 
 .progress-bar.html.show{
-  width:95%;
+  width:40%;
 }
 
 .progress-bar.css.show{
-  width:90%;
+  width:20%;
 }
 
 .progress-bar.javascript.show{
-  width:80%;
+  width:5%;
 }
 
 .progress-bar.github.show{
-  width:85%;
+  width:10%;
 }
 
 
